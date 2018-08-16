@@ -9,9 +9,7 @@
 dogs = [
   {
     name: 'Bowie',
-    description: 'Bowie dances when he walks',
-    user: 1,
-    likes: 10
+    description: 'Bowie dances when he walks'
   },
   {
     name: 'Brownie',
@@ -19,12 +17,11 @@ dogs = [
   },
   {
     name: 'Jax',
-    description: '',
+    description: ''
   },
   {
     name: 'Jiro',
-    description: 'Jiro takes a long time to destroy his toys',
-    likes: 8
+    description: 'Jiro takes a long time to destroy his toys'
   },
   {
     name: 'Pete',
@@ -62,4 +59,14 @@ dogs.each do |dog|
       sleep 1
     end
   end
+end
+
+likes = [
+  {
+    dog_id: 1
+  }
+]
+
+likes.each do |like|
+  Like.find_or_create_by(like)
 end

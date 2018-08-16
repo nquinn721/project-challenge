@@ -4,7 +4,7 @@ class DogsController < ApplicationController
   # GET /dogs
   # GET /dogs.json
   def index
-    @dogs = Dog.paginate(:page => params[:page], :per_page => 5).order(params[:order_by_like] ? 'likes DESC' : 'id DESC')
+    @dogs = Dog.paginate(:page => params[:page], :per_page => 5).order('id ASC').references(:likes)
   end
 
   # GET /dogs/1
