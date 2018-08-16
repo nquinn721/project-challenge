@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 2018_06_07_114248) do
     t.string "name"
     t.integer "user", default: 0, null: false
     t.integer "likes", default: 0, null: false
+    t.datetime "like_time"
     t.datetime "birthday"
     t.datetime "adoption_date"
     t.text "description"

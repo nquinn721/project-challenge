@@ -4,7 +4,7 @@ class DogsController < ApplicationController
   # GET /dogs
   # GET /dogs.json
   def index
-    @dogs = Dog.paginate(:page => params[:page], :per_page => 5)
+    @dogs = Dog.paginate(:page => params[:page], :per_page => 5).order(params[:order_by_like] ? 'likes DESC' : 'id DESC')
   end
 
   # GET /dogs/1
@@ -57,6 +57,7 @@ class DogsController < ApplicationController
 
   def like
     @dog.increment(:likes, 1)
+    # @dog.update(:like_time => Time.now)
     @dog.save
   end
 

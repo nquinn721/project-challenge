@@ -23,7 +23,8 @@ dogs = [
   },
   {
     name: 'Jiro',
-    description: 'Jiro takes a long time to destroy his toys'
+    description: 'Jiro takes a long time to destroy his toys',
+    likes: 8
   },
   {
     name: 'Pete',
