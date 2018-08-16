@@ -1,5 +1,5 @@
 class DogsController < ApplicationController
-  before_action :set_dog, only: [:show, :edit, :update, :destroy]
+  before_action :set_dog, only: [:show, :edit, :update, :destroy, :like]
 
   # GET /dogs
   # GET /dogs.json
@@ -53,6 +53,11 @@ class DogsController < ApplicationController
         format.json { render json: @dog.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  def like
+    @dog.increment(:likes, 1)
+    @dog.save
   end
 
   # DELETE /dogs/1
