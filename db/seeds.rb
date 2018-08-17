@@ -64,9 +64,30 @@ end
 likes = [
   {
     dog_id: 1
+  },
+  {
+    dog_id: 1
+  },
+  {
+    dog_id: 1
+  },
+  {
+    dog_id: 1
+  },
+  {
+    dog_id: 2
+  },
+  {
+    dog_id: 6
+  },
+  {
+    dog_id: 6
+  },
+  {
+    dog_id: 6
   }
 ]
 
 likes.each do |like|
-  Like.find_or_create_by(like)
+  Like.create(like)
 end
