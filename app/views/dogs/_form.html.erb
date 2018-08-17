@@ -2,7 +2,7 @@
   <%= f.input :name %>
   <%= f.input :description, as: :text %>
   <%= f.input :image, as: :file, :input_html => { :multiple => true } %>
-  <%= f.input :user, :as => :hidden, :input_html => { :value => current_user.id } %>
+  <%= f.input :user_id, :as => :hidden, :input_html => { :value => current_user.id } %>
 
   <% if @dog.images.any? %>
     <%= image_tag @dog.images.first %>

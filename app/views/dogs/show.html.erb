@@ -5,7 +5,6 @@
   <% end %>
   <div>Likes: <%= @dog.likes.length %></div>
   <p><%= @dog.description %></p>
-
   <% if current_user %>
     <% if current_user.id == @dog.user_id %>
 	  	<%= link_to "Edit #{@dog.name}'s Profile", edit_dog_path %>
