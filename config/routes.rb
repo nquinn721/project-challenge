@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   devise_for :users
   resources :dogs
   root to: "dogs#index"
-  get 'dogs/:id/like', to: 'dogs#like'
+  get 'likes/:dog_id/create', to: 'likes#create'
 end

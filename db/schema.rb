@@ -35,11 +35,14 @@ ActiveRecord::Schema.define(version: 2018_08_16_215303) do
 
   create_table "dogs", force: :cascade do |t|
     t.string "name"
+    t.string "suomethh"
+    t.integer "user_id"
     t.datetime "birthday"
     t.datetime "adoption_date"
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_dogs_on_user_id"
   end
 
   create_table "likes", force: :cascade do |t|
